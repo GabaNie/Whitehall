@@ -11,11 +11,15 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 
 public class Button_class {
-    Relation relation;
+    HashMap<String,Group> all_group;
+    static HashMap<String, ArrayList<String>> map;
+    static ArrayList<String> array1, array2;
     @FXML
     static VBox main;
     @FXML
@@ -26,8 +30,8 @@ public class Button_class {
     public AnchorPane announcement;
     public AnchorPane action_panel;
     @FXML
-    public Group g1;
-    public Group g2;
+    public static Group g1;
+    public static Group g2;
     @FXML
     public Rectangle r1;
     @FXML

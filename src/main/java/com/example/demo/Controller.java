@@ -1,21 +1,30 @@
 package com.example.demo;
 
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import static com.example.demo.Relation.*;
 
 
 public class Controller extends Button_class {
     Rectangle current;
+    public void init(){
+        map=new HashMap<>();
+        array1= new ArrayList<>();
+        array1.add("g1");
+        array1.add("g2");
+        map.put("r1",array1);
+        all_group= get_all_groups(board);
+    }
+
     @FXML
     protected void open_window(AnchorPane a){
         a.setVisible(true);
@@ -29,17 +38,17 @@ public class Controller extends Button_class {
     @FXML
     protected void set_active(Group g){
         g.setDisable(false);
-        Circle c= Relation.get_circle(g);
+        Circle c= get_circle(g);
         c.setFill(Paint.valueOf("#3ffc32"));
     }
     @FXML
     protected void active(){
-       ArrayList<Group> arrayList = Relation.get_groups(board);
-       for(Group g:arrayList){
-           System.out.println(g.getId());
-           set_active(g);
+        init();
+        ArrayList<String> arrayList = get_groups(r1);
+        for(String s:arrayList){
+           //System.out.println(all_group.get(s).getId());
+           set_active(all_group.get(s));
        }
-
     }
     @FXML
     protected void a(Event e){
