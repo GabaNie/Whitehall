@@ -83,11 +83,11 @@
                   <Button fx:id="close" layoutX="77.0" layoutY="251.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="150.0" text="Zakończ rundę" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="announcement" layoutX="356.0" layoutY="183.0" prefHeight="200.0" prefWidth="423.0" visible="false">
+            <AnchorPane fx:id="announcement" layoutX="356.0" layoutY="183.0" prefHeight="200.0" prefWidth="423.0">
                <children>
                   <ListView layoutX="-1.0" prefHeight="200.0" prefWidth="423.0" />
-                  <Text layoutX="138.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="otwarto okno" />
-                  <Button fx:id="ok" layoutX="174.0" layoutY="132.0" mnemonicParsing="false" text="OK" />
+                  <Text layoutX="138.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jakiś tekst na rozpoczęcie" />
+                  <Button fx:id="ok" layoutX="174.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#init" text="OK" />
                </children>
             </AnchorPane>
             <Rectangle fx:id="r11" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="18.0" layoutX="113.0" layoutY="217.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="18.0">

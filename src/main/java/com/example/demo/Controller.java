@@ -23,6 +23,7 @@ public class Controller extends Button_class {
         array1.add("g2");
         map.put("r1",array1);
         all_group= get_all_groups(board);
+        close_window(announcement);
     }
 
     @FXML
@@ -43,7 +44,7 @@ public class Controller extends Button_class {
     }
     @FXML
     protected void active(){
-        init();
+        //init();
         ArrayList<String> arrayList = get_groups(r1);
         for(String s:arrayList){
            //System.out.println(all_group.get(s).getId());
