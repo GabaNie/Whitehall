@@ -13,11 +13,10 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
-
 
 public class Button_class {
     HashMap<String,Group> all_group;
+    HashMap<String,Rectangle> all_rectangle;
     static HashMap<String, ArrayList<String>> map;
     static ArrayList<String> array1, array2;
     @FXML
@@ -29,6 +28,7 @@ public class Button_class {
     @FXML
     public AnchorPane announcement;
     public AnchorPane action_panel;
+    public AnchorPane wybierz_pole;
     @FXML
     public static Group g1;
     public static Group g2;

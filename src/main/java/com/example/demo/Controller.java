@@ -15,17 +15,32 @@ import static com.example.demo.Relation.*;
 
 
 public class Controller extends Button_class {
+    String green="#3ffc32";
     Rectangle current;
     public void init(){
         map=new HashMap<>();
         array1= new ArrayList<>();
         array1.add("g1");
         array1.add("g2");
+        array1.add("g3");
+        array2= new ArrayList<>();
+        array2.add("g3");
+        array2.add("g4");
         map.put("r1",array1);
+        map.put("r2",array2);
         all_group= get_all_groups(board);
+        all_rectangle= get_all_rectangle(board);
         close_window(announcement);
+        open_window(wybierz_pole);
     }
-
+    @FXML
+    protected void choose_rectangle(){
+        for( Rectangle r: all_rectangle.values()){
+            r.setDisable(false);
+            r.setStroke(Paint.valueOf(green));
+        }
+        close_window(wybierz_pole);
+    }
     @FXML
     protected void open_window(AnchorPane a){
         a.setVisible(true);
@@ -40,14 +55,13 @@ public class Controller extends Button_class {
     protected void set_active(Group g){
         g.setDisable(false);
         Circle c= get_circle(g);
-        c.setFill(Paint.valueOf("#3ffc32"));
+        c.setFill(Paint.valueOf(green));
     }
     @FXML
     protected void active(){
-        //init();
-        ArrayList<String> arrayList = get_groups(r1);
+
+        ArrayList<String> arrayList = get_groups(current);
         for(String s:arrayList){
-           //System.out.println(all_group.get(s).getId());
            set_active(all_group.get(s));
        }
     }

@@ -71,10 +71,22 @@
                   </Text>
                </children>
             </Group>
-            <Rectangle fx:id="r1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="18.0" layoutX="89.0" layoutY="126.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="18.0">
+            <Rectangle fx:id="r1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="89.0" layoutY="126.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor></Rectangle>
+            <Rectangle fx:id="r2" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="113.0" layoutY="217.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <AnchorPane fx:id="wybierz_pole" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fixedCellSize="0.0" layoutX="7.0" layoutY="6.0" prefHeight="187.0" prefWidth="188.0" />
+                  <Text layoutX="42.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz pole startowe" />
+                  <Button fx:id="wybierz" onMouseClicked="#choose_rectangle" layoutX="74.0" layoutY="113.0" mnemonicParsing="false" text="Wybierz" />
+               </children>
+            </AnchorPane>
             <AnchorPane fx:id="action_panel" layoutX="453.0" layoutY="120.0" prefHeight="400.0" prefWidth="300.0" visible="false">
                <children>
                   <ListView layoutX="7.0" layoutY="2.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
@@ -90,11 +102,6 @@
                   <Button fx:id="ok" layoutX="174.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#init" text="OK" />
                </children>
             </AnchorPane>
-            <Rectangle fx:id="r11" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="18.0" layoutX="113.0" layoutY="217.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="18.0">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
-            </Rectangle>
             <Group fx:id="g3" disable="true" layoutX="113.0" layoutY="177.0" onMouseClicked="#a">
                <children>
                   <Circle fx:id="c3" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
