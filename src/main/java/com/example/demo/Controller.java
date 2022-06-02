@@ -23,11 +23,32 @@ public class Controller extends Button_class {
         array1.add("g1");
         array1.add("g2");
         array1.add("g3");
+        array1.add("g15");
+        map.put("r1",array1);
         array2= new ArrayList<>();
         array2.add("g3");
         array2.add("g4");
-        map.put("r1",array1);
         map.put("r2",array2);
+        array3= new ArrayList<>();
+        array3.add("g4");
+        array3.add("g5");
+        array3.add("g10");
+        array3.add("g6");
+        map.put("r3",array3);
+        array4= new ArrayList<>();
+        array4.add("g6");
+        array4.add("g7");
+        array4.add("g8");
+        map.put("r4",array4);
+        array5= new ArrayList<>();
+        array5.add("g8");
+        array5.add("g9");
+        map.put("r5",array5);
+        array6= new ArrayList<>();
+        array6.add("g9");
+        array6.add("g10");
+        array6.add("g11");
+        map.put("r6",array6);
         all_group= get_all_groups(board);
         all_rectangle= get_all_rectangle(board);
         close_window(announcement);
@@ -38,6 +59,7 @@ public class Controller extends Button_class {
         for( Rectangle r: all_rectangle.values()){
             r.setDisable(false);
             r.setStroke(Paint.valueOf(green));
+            // funkcja zapisujaca wybrane pole
         }
         close_window(wybierz_pole);
     }
@@ -48,7 +70,6 @@ public class Controller extends Button_class {
     @FXML
     protected  void close_window(AnchorPane a){
         a.setVisible(false);
-        current=null;
     }
 
     @FXML

@@ -51,10 +51,24 @@
    <children>
       <Pane fx:id="board" prefHeight="750.0" prefWidth="1200.0" styleClass="bodybd" stylesheets="@style.css">
          <children>
+            <Rectangle fx:id="r1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="89.0" layoutY="126.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></Rectangle>
+            <Rectangle fx:id="r2" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="126.0" layoutY="274.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r3" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="104.0" layoutY="435.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
             <Group fx:id="g1" disable="true" layoutX="73.0" layoutY="58.0" onMouseClicked="#a">
                <children>
                   <Circle fx:id="c1" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
-                  <Text fx:id="napis" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="16.303497314453125">
+                  <Text fx:id="napi" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="16.303497314453125">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -71,11 +85,607 @@
                   </Text>
                </children>
             </Group>
-            <Rectangle fx:id="r1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="89.0" layoutY="126.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+            <Group fx:id="g3" disable="true" layoutX="122.0" layoutY="205.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c3" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="16.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g4" disable="true" layoutX="135.0" layoutY="361.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c4" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis4" layoutX="-7.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="13.103515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g5" disable="true" layoutX="51.0" layoutY="413.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c5" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis5" layoutX="-7.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="13.103515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g6" disable="true" layoutX="89.0" layoutY="520.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c6" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" wrappingWidth="16.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g7" disable="true" layoutX="29.0" layoutY="618.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c7" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" wrappingWidth="16.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g8" disable="true" layoutX="107.0" layoutY="673.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c8" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis212" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" wrappingWidth="16.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g10" disable="true" layoutX="179.0" layoutY="467.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c10" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis213" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g15" disable="true" layoutX="148.0" layoutY="102.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c15" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis214" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" wrappingWidth="29.90350341796875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g14" disable="true" layoutX="209.0" layoutY="139.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c14" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14" wrappingWidth="33.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g9" disable="true" layoutX="187.0" layoutY="596.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c9" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis216" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" wrappingWidth="16.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g13" disable="true" layoutX="233.0" layoutY="294.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c13" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis217" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13" wrappingWidth="31.503509521484375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g16" disable="true" layoutX="244.0" layoutY="43.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c16" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2151" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g17" disable="true" layoutX="321.0" layoutY="80.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c17" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2152" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="17" wrappingWidth="32.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g29" disable="true" layoutX="397.0" layoutY="43.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c29" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2153" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="29" wrappingWidth="34.703521728515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g18" disable="true" layoutX="321.0" layoutY="205.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c18" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18" wrappingWidth="33.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g11" disable="true" layoutX="270.0" layoutY="507.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c11" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2155" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" wrappingWidth="29.903533935546875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g28" disable="true" layoutX="419.0" layoutY="171.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c28" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="28" wrappingWidth="30.703399658203125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g27" disable="true" layoutX="365.0" layoutY="261.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c27" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21542" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="27" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g12" disable="true" layoutX="281.0" layoutY="369.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c12" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21543" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" wrappingWidth="31.503448486328125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g30" disable="true" layoutX="475.0" layoutY="49.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c30" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215411" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g31" disable="true" layoutX="483.0" layoutY="161.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c31" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215412" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="31" wrappingWidth="29.903472900390625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g26" disable="true" layoutX="427.0" layoutY="271.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c26" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215413" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="26" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g25" disable="true" layoutX="490.0" layoutY="395.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c25" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215414" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25" wrappingWidth="30.703460693359375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g34" disable="true" layoutX="598.0" layoutY="339.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c34" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215415" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="34" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g32" disable="true" layoutX="598.0" layoutY="205.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c32" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215416" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="32" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g58" disable="true" layoutX="775.0" layoutY="239.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c58" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154161" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="58" wrappingWidth="31.503509521484375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g59" disable="true" layoutX="700.0" layoutY="161.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c59" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154162" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="59" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g61" disable="true" layoutX="856.0" layoutY="43.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c61" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154163" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="61" wrappingWidth="30.703521728515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g35" disable="true" layoutX="576.0" layoutY="469.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c35" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154164" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="35" wrappingWidth="29.903472900390625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g56" disable="true" layoutX="907.0" layoutY="239.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c56" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611" layoutX="-16.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="56" wrappingWidth="31.503509521484375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g57" disable="true" layoutX="856.0" layoutY="347.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c57" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541612" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="57" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g42" disable="true" layoutX="797.0" layoutY="460.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c42" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541613" layoutX="-16.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="42" wrappingWidth="30.703460693359375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g19" disable="true" layoutX="322.0" layoutY="438.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c19" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541614" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" wrappingWidth="37.103424072265625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g36" disable="true" layoutX="634.0" layoutY="529.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c36" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541641" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g24" disable="true" layoutX="505.0" layoutY="536.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c24" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541642" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24" wrappingWidth="30.703521728515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g40" disable="true" layoutX="739.0" layoutY="618.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c40" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541643" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40" wrappingWidth="30.703521728515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g41" disable="true" layoutX="708.0" layoutY="489.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c41" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541644" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="41" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g37" disable="true" layoutX="554.0" layoutY="618.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c37" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541645" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="37" wrappingWidth="29.103485107421875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g38" disable="true" layoutX="656.0" layoutY="662.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c38" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541646" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="38" wrappingWidth="33.903472900390625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g22" disable="true" layoutX="405.0" layoutY="558.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c22" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541647" layoutX="-14.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="22" wrappingWidth="28.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g43" disable="true" layoutX="841.0" layoutY="629.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c43" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541648" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="43" wrappingWidth="28.303558349609375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g39" disable="true" layoutX="797.0" layoutY="717.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c39" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215416481" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="39" wrappingWidth="33.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g23" disable="true" layoutX="483.0" layoutY="662.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c23" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215416451" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23" wrappingWidth="29.903533935546875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g20" disable="true" layoutX="322.0" layoutY="578.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c20" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215416452" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20" wrappingWidth="31.503509521484375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g21" disable="true" layoutX="321.0" layoutY="695.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c21" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154164521" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21" wrappingWidth="29.903533935546875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g60" disable="true" layoutX="730.0" layoutY="65.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c60" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541621" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="60" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g33" disable="true" layoutX="497.0" layoutY="283.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c33" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154131" layoutX="-14.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="33" wrappingWidth="28.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g54" disable="true" layoutX="959.0" layoutY="144.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c54" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis215416111" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="54" wrappingWidth="31.503509521484375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g53" disable="true" layoutX="1019.0" layoutY="43.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c53" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154161111" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="53" wrappingWidth="30.703460693359375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g52" disable="true" layoutX="1063.0" layoutY="117.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c52" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154161112" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="52" wrappingWidth="29.903472900390625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g51" disable="true" layoutX="1178.0" layoutY="148.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c51" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154161113" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="51" wrappingWidth="29.903594970703125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g50" disable="true" layoutX="1085.0" layoutY="227.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c50" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis2154161114" layoutX="-16.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" wrappingWidth="31.503448486328125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g55" disable="true" layoutX="981.0" layoutY="271.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c55" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611141" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="55" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g49" disable="true" layoutX="1076.0" layoutY="413.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c49" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611142" layoutX="-14.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="49" wrappingWidth="28.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g48" disable="true" layoutX="1156.0" layoutY="395.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c48" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611143" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="48" wrappingWidth="30.703521728515625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g47" disable="true" layoutX="1164.0" layoutY="542.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c47" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611144" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="47" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g46" disable="true" layoutX="1085.0" layoutY="542.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c46" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611145" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="46" wrappingWidth="29.103546142578125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g45" disable="true" layoutX="1054.0" layoutY="695.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c45" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611146" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45" wrappingWidth="29.103424072265625">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Group fx:id="g44" disable="true" layoutX="975.0" layoutY="717.0" onMouseClicked="#a">
+               <children>
+                  <Circle fx:id="c44" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Text fx:id="napis21541611147" layoutX="-15.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="44" wrappingWidth="28.303497314453125">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <Rectangle fx:id="r4" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="51.0" layoutY="565.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
-               </cursor></Rectangle>
-            <Rectangle fx:id="r2" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="113.0" layoutY="217.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r5" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="156.0" layoutY="699.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r6" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="213.0" layoutY="476.0" onMouseClicked="#set_1" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
@@ -84,7 +694,7 @@
                <children>
                   <ListView fixedCellSize="0.0" layoutX="7.0" layoutY="6.0" prefHeight="187.0" prefWidth="188.0" />
                   <Text layoutX="42.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz pole startowe" />
-                  <Button fx:id="wybierz" onMouseClicked="#choose_rectangle" layoutX="74.0" layoutY="113.0" mnemonicParsing="false" text="Wybierz" />
+                  <Button fx:id="wybierz" layoutX="74.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#choose_rectangle" text="Wybierz" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="action_panel" layoutX="453.0" layoutY="120.0" prefHeight="400.0" prefWidth="300.0" visible="false">
@@ -102,26 +712,6 @@
                   <Button fx:id="ok" layoutX="174.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#init" text="OK" />
                </children>
             </AnchorPane>
-            <Group fx:id="g3" disable="true" layoutX="113.0" layoutY="177.0" onMouseClicked="#a">
-               <children>
-                  <Circle fx:id="c3" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
-                  <Text fx:id="napis2" layoutX="-8.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="16.303497314453125">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Group>
-            <Group fx:id="g4" disable="true" layoutX="131.0" layoutY="271.0" onMouseClicked="#a">
-               <children>
-                  <Circle fx:id="c4" accessibleRole="BUTTON" fill="WHITE" radius="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
-                  <Text fx:id="napis4" layoutX="-7.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="13.103515625">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Group>
          </children>
       </Pane>
       <SplitPane orientation="VERTICAL" prefHeight="50.0" prefWidth="160.0">
