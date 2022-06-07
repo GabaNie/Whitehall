@@ -662,57 +662,6 @@
                   </Text>
                </children>
             </Group>
-            <AnchorPane fx:id="announcement" layoutX="374.0" layoutY="158.0" prefHeight="280.0" prefWidth="367.0">
-               <children>
-                  <ListView layoutX="49.0" layoutY="5.0" prefHeight="260.0" prefWidth="300.0" />
-                  <Text layoutX="138.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jakiś tekst na rozpoczęcie" />
-                  <Button fx:id="ok" layoutX="173.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#init" text="OK" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="choose_rectangle" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
-               <children>
-                  <ListView fixedCellSize="0.0" layoutX="7.0" layoutY="6.0" prefHeight="187.0" prefWidth="188.0" />
-                  <Text layoutX="42.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz pole startowe" />
-                  <Button fx:id="wybierz" layoutX="74.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#choose_rectangle" text="Wybierz" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="murder1" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
-               <children>
-                  <ListView prefHeight="200.0" prefWidth="200.0" />
-                  <Text layoutX="25.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuba rozbójnik popełnił pierwsze morderstwo" wrappingWidth="150.4000000000001" />
-                  <Button fx:id="murder_ok" layoutX="74.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#action" text="OK" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="action_panel" layoutX="450.0" layoutY="125.0" prefHeight="400.0" prefWidth="300.0" visible="false">
-               <children>
-                  <ListView layoutX="7.0" layoutY="2.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Text fx:id="action_text" layoutX="52.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GRaczu n \n jaką akcje chcesz zrobic?" wrappingWidth="200.0">
-                     <font>
-                        <Font size="18.0" />
-                     </font></Text>
-                  <Button fx:id="check" layoutX="77.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#check" prefHeight="46.0" prefWidth="150.0" text="Sprawdź" />
-                  <Button fx:id="kill" layoutX="77.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#kill_action" prefHeight="54.0" prefWidth="150.0" text="Zabij" />
-                  <Button fx:id="close" layoutX="77.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#end_action" prefHeight="54.0" prefWidth="150.0" text="Zakończ rundę" />
-                  <Button fx:id="go" layoutX="77.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#go" prefHeight="46.0" prefWidth="150.0" text="Idź" />
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="kuba_check" layoutX="277.0" layoutY="195.0" prefHeight="200.0" prefWidth="200.0" visible="false">
-               <children>
-                  <ListView prefHeight="260.0" prefWidth="300.0" />
-                  <Text fx:id="kuba_text" layoutX="74.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuba był tu" />
-                  <Button fx:id="kuba_ok" layoutX="119.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#checked" text="OK" />
-               </children>
-            </AnchorPane>
-            <ImageView fx:id="spy_red" disable="true" fitHeight="40.0" fitWidth="50.0" layoutX="56.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" visible="false">
-               <image>
-                  <Image url="@szpieg-czerowny.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="spy_blue" disable="true" fitHeight="40.0" fitWidth="50.0" layoutX="122.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" visible="false">
-               <image>
-                  <Image url="@szpieg-niebieski.png" />
-               </image>
-            </ImageView>
             <Rectangle fx:id="r1" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="89.0" layoutY="126.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -832,6 +781,122 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Rectangle>
+            <Rectangle fx:id="r25" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="911.0" layoutY="690.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r26" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="1023.0" layoutY="723.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r27" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="1054.0" layoutY="609.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r28" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="1107.0" layoutY="467.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r29" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="1023.0" layoutY="338.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r30" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="1125.0" layoutY="135.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r31" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="928.0" layoutY="186.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r32" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="981.0" layoutY="80.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r33" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="752.0" layoutY="12.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r34" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="708.0" layoutY="108.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r35" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="677.0" layoutY="217.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r36" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="869.0" layoutY="274.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <Rectangle fx:id="r37" accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" disable="true" height="18.0" layoutX="810.0" layoutY="395.0" onMouseClicked="#choose" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="18.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Rectangle>
+            <AnchorPane fx:id="announcement" layoutX="374.0" layoutY="158.0" prefHeight="250.0" prefWidth="350.0">
+               <children>
+                  <ListView layoutX="49.0" layoutY="5.0" prefHeight="260.0" prefWidth="300.0" />
+                  <Text layoutX="138.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jakiś tekst na rozpoczęcie" />
+                  <Button fx:id="ok" layoutX="173.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#init" text="OK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="action_panel" layoutX="450.0" layoutY="125.0" prefHeight="400.0" prefWidth="300.0" visible="false">
+               <children>
+                  <ListView layoutX="7.0" layoutY="2.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Text fx:id="action_text" layoutX="52.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GRaczu n \n jaką akcje chcesz zrobic?" wrappingWidth="200.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Text>
+                  <Button fx:id="check" layoutX="77.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#check" prefHeight="46.0" prefWidth="150.0" text="Sprawdź" />
+                  <Button fx:id="kill" layoutX="77.0" layoutY="234.0" mnemonicParsing="false" onMouseClicked="#kill_action" prefHeight="54.0" prefWidth="150.0" text="Zabij" />
+                  <Button fx:id="close" layoutX="77.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#end_action" prefHeight="54.0" prefWidth="150.0" text="Zakończ rundę" />
+                  <Button fx:id="go" layoutX="77.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#go" prefHeight="46.0" prefWidth="150.0" text="Idź" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="kuba_check" layoutX="277.0" layoutY="195.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView prefHeight="260.0" prefWidth="300.0" />
+                  <Text fx:id="kuba_text" layoutX="74.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuba był tu" />
+                  <Button fx:id="kuba_ok" layoutX="119.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#checked" text="OK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="murder1" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView prefHeight="200.0" prefWidth="200.0" />
+                  <Text layoutX="25.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuba rozbójnik popełnił pierwsze morderstwo" wrappingWidth="150.4000000000001" />
+                  <Button fx:id="murder_ok" layoutX="74.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#action" text="OK" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="choose_rectangle" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ListView fixedCellSize="0.0" layoutX="7.0" layoutY="6.0" prefHeight="187.0" prefWidth="188.0" />
+                  <Text layoutX="42.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz pole startowe" />
+                  <Button fx:id="wybierz" layoutX="74.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#choose_rectangle" text="Wybierz" />
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="spy_red" disable="true" fitHeight="40.0" fitWidth="50.0" layoutX="56.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@szpieg-czerowny.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="spy_blue" disable="true" fitHeight="40.0" fitWidth="50.0" layoutX="122.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@szpieg-niebieski.png" />
+               </image>
+            </ImageView>
             <AnchorPane fx:id="choosed" layoutX="384.0" layoutY="168.0" prefHeight="280.0" prefWidth="367.0" visible="false">
                <children>
                   <ListView layoutX="49.0" layoutY="5.0" prefHeight="260.0" prefWidth="300.0" />
