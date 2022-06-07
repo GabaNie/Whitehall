@@ -17,7 +17,18 @@ import static com.example.demo.Relation.*;
 public class Controller extends Button_class {
     String green="#3ffc32";
     Rectangle current;
+    private Player player1;
+    private Player player2;
+    private int activeplayer;
+
     public void init(){
+        player1= new Player();
+        player1.connectToServer();
+        player1.setUpGUI();
+        player2= new Player();
+        player2.connectToServer();
+        player2.setUpGUI();
+
         map=new HashMap<>();
         array1= new ArrayList<>();
         array1.add("g1");
@@ -52,6 +63,7 @@ public class Controller extends Button_class {
         all_group= get_all_groups(board);
         all_rectangle= get_all_rectangle(board);
         close_window(announcement);
+        activeplayer=1;
         open_window(choose_rectangle);
     }
     @FXML
@@ -59,10 +71,29 @@ public class Controller extends Button_class {
         for( Rectangle r: all_rectangle.values()){
             r.setDisable(false);
             r.setStroke(Paint.valueOf(green));
-            // funkcja zapisujaca wybrane pole
         }
+
         close_window(choose_rectangle);
     }
+    @FXML
+    protected void choose(Event e){
+        Rectangle r= (Rectangle) e.getSource();
+        if(activeplayer==1){
+            player1.setRectangle(r.getId());
+            System.out.println("player1");
+            r.setDisable(true);
+            r.setStroke(Paint.valueOf("Black"));
+            activeplayer=2;
+        }else {
+            player2.setRectangle(r.getId());
+            System.out.println("player2");
+            for( Rectangle rr: all_rectangle.values()){
+                rr.setDisable(true);
+                rr.setStroke(Paint.valueOf("Black"));
+            }
+        }
+    }
+
     @FXML
     protected void open_window(AnchorPane a){
         a.setVisible(true);
@@ -93,7 +124,7 @@ public class Controller extends Button_class {
     }
 
     @FXML
-    protected void set_1(Event e){
+    protected void choose1(Event e){
         open_window(action_panel);
         current= (Rectangle) e.getSource();
     }

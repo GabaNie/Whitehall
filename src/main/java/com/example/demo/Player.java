@@ -5,7 +5,7 @@ import java.io.*;
 
 
 public class Player{
-    private String rectangleID;
+    public String rectangleID;
     //private int width;
     //private int height;
     private int playerID;
@@ -15,11 +15,14 @@ public class Player{
 
     private ClientSideConnection csc;
 
-    public Player(String rectangle){
-        rectangleID= rectangle;
+    public Player(){
+        rectangleID= "";
         //width=w;
         //height=h;
         turnsMade=0;
+    }
+    public void setRectangle(String recID){
+        rectangleID= recID;
     }
     public void setUpGUI(){
 
@@ -181,11 +184,6 @@ public class Player{
             }
         }
     }
-    public static void main(String[]args){
-        Player p= new Player("2");
-        p.connectToServer();
-        p.setUpGUI();
-       // p.setUpButton();
-    }
+
 }
 
