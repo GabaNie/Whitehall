@@ -52,7 +52,7 @@ public class Relation extends Button_class {
         return list;
     }
 
-    public static ArrayList<String> get_groups(Rectangle r){
+    public static String[] get_groups(Rectangle r){
         return map_group.get(r.getId());
     }
 

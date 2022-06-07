@@ -22,6 +22,7 @@ public class Controller extends Button_class {
     private Player player2;
     private Kuba kuba;
     private Player activeplayer;
+    AnchorPane active;
 
     public void init(){
         player1= new Player();
@@ -32,6 +33,7 @@ public class Controller extends Button_class {
         player2.setUpGUI();
         kuba= new Kuba();
         kuba.connectToServer();
+        active=choosed;
 
         map_group=new HashMap<>();
         set_array();
@@ -53,25 +55,29 @@ public class Controller extends Button_class {
     @FXML
     protected void choose(Event e){
         Rectangle r= (Rectangle) e.getSource();
-        if(activeplayer==player1){
-            move(r);
-            System.out.println("player1");
-            r.setDisable(true);
-            r.setStroke(Paint.valueOf("Black"));
-            activeplayer=player2;
-        }else {
-            move(r);
-            System.out.println("player2");
-            for( Rectangle rr: all_rectangle.values()){
-                rr.setDisable(true);
-                rr.setStroke(Paint.valueOf("Black"));
-                rr.setOnMouseClicked(event->choose1());
-            }
-            start_game();
+        move(r);
+        for( Rectangle rr: all_rectangle.values()){
+            rr.setDisable(true);
+            rr.setStroke(Paint.valueOf("Black"));
         }
+        open_window(active);
+    }
+    @FXML
+    protected void choosed1(){
+        close_window(choosed);
+        for( Rectangle r: all_rectangle.values()){
+            r.setDisable(false);
+            r.setStroke(Paint.valueOf(green));
+        }
+        changeplayer();
+        player1.rectangle.setDisable(true);
+        player1.rectangle.setStroke(Paint.valueOf("Black"));
+        ok2.setOnMouseClicked(mouseEvent -> start_game());
     }
     @FXML
     protected void start_game(){
+        close_window(choosed);
+        active=kuba_check;
         String s=kuba.get_position();
         Circle c= get_circle(all_group.get(s));
         c.setFill(Paint.valueOf("Red"));
@@ -135,9 +141,15 @@ public class Controller extends Button_class {
         c.setFill(Paint.valueOf(color));
     }
     @FXML
+    protected void set_active_rectangle(String rect,String color){
+        Rectangle r= all_rectangle.get(rect);
+        r.setDisable(false);
+        r.setStroke(Paint.valueOf(color));
+    }
+    @FXML
     protected void check(){
         go.setDisable(true);
-        ArrayList<String> arrayList = get_groups(activeplayer.rectangle);
+        String[] arrayList = get_groups(activeplayer.rectangle);
         for(String s:arrayList){
            set_active_group(all_group.get(s),green);
        }
@@ -151,7 +163,19 @@ public class Controller extends Button_class {
     }
     @FXML
     protected void go(){
+        set_active_rectangle(activeplayer.rectangle.getId(),green);
+        set_move(activeplayer.rectangle.getId(),1);
+    }
 
+    protected void set_move(String rect, int n){
+        if (n>3) return;
+        String[] array=map_rectangle.get(rect);
+        for(String r:array){
+            if(all_rectangle.get(r).isDisable()){
+                set_active_rectangle(r,green);
+                set_move(r,n++);
+            }
+        }
     }
     @FXML
     protected void end_action(){
@@ -177,46 +201,35 @@ public class Controller extends Button_class {
         open_window(action_panel);
     }
 
-    @FXML
-    protected void choose1(){
-        //current= (Rectangle) e.getSource();
-    }
 
     protected void set_array() {
         rect = new String[]{"t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8", "t9"};
         map_rectangle= new HashMap<>();
-        map_rectangle.put("r1",new String[]{"r2"});
-        array1 = new ArrayList<>();
-        array1.add("g1");
-        array1.add("g2");
-        array1.add("g3");
-        array1.add("g15");
-        map_group.put("r1", array1);
-        array2 = new ArrayList<>();
-        array2.add("g3");
-        array2.add("g4");
-        map_group.put("r2", array2);
-        array3 = new ArrayList<>();
-        array3.add("g4");
-        array3.add("g5");
-        array3.add("g10");
-        array3.add("g6");
-        map_group.put("r3", array3);
-        array4 = new ArrayList<>();
-        array4.add("g6");
-        array4.add("g7");
-        array4.add("g8");
-        map_group.put("r4", array4);
-        array5 = new ArrayList<>();
-        array5.add("g8");
-        array5.add("g9");
-        map_group.put("r5", array5);
-        array6 = new ArrayList<>();
-        array6.add("g9");
-        array6.add("g10");
-        array6.add("g11");
-        map_group.put("r6", array6);
 
+        map_rectangle.put("r1",new String[]{"r2","r9"});
+        map_group.put("r1", new String[]{"g1","g2","g3","g15"});
+        map_rectangle.put("r2",new String[]{"r1","r3"});
+        map_group.put("r2", new String[]{"g3","g4"});
+        map_rectangle.put("r3",new String[]{"r2","r4"});
+        map_group.put("r3", new String[]{"g4","g5","g10","g6"});
+        map_rectangle.put("r4",new String[]{"r3","r5"});
+        map_group.put("r4", new String[]{"g6","g7","g8"});
+        map_rectangle.put("r5",new String[]{"r4","r6"});
+        map_group.put("r5", new String[]{"g8","g9"});
+        map_rectangle.put("r6",new String[]{"r3","r5","r7","r15"});
+        map_group.put("r6", new String[]{"g9","g10","g11"});
+        map_rectangle.put("r7",new String[]{"r6","r13"});
+        map_group.put("r7", new String[]{"g12","g13",});
+        map_rectangle.put("r8",new String[]{"r7","r9"});
+        map_group.put("r8", new String[]{"g13","g14"});
+        map_rectangle.put("r9",new String[]{"r1","r8"});
+        map_group.put("r9", new String[]{"g15","g14","g16"});
+        map_rectangle.put("r10",new String[]{"r9","r11","r12"});
+        map_group.put("r10", new String[]{"g16","g17","g29"});
+        map_rectangle.put("r11",new String[]{"r10","r13"});
+        map_group.put("r11", new String[]{"g17","g18"});
+        map_rectangle.put("r12",new String[]{"r10","r14","r20"});
+        map_group.put("r12", new String[]{"g29","g30","g28","31"});
     }
 
 
