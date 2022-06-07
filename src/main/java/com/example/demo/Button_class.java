@@ -51,5 +51,6 @@ public class Button_class {
     @FXML
     public Text action_text;
     public Text text_turn;
+    public Text kuba_text;
 
 }

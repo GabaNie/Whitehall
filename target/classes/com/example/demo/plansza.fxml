@@ -699,7 +699,7 @@
             <AnchorPane fx:id="kuba_check" layoutX="277.0" layoutY="195.0" prefHeight="200.0" prefWidth="200.0" visible="false">
                <children>
                   <ListView prefHeight="260.0" prefWidth="300.0" />
-                  <Text layoutX="74.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuba był tu" />
+                  <Text fx:id="kuba_text" layoutX="74.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kuba był tu" />
                   <Button fx:id="kuba_ok" layoutX="119.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#checked" text="OK" />
                </children>
             </AnchorPane>

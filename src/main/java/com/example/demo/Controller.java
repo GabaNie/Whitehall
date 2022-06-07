@@ -23,6 +23,7 @@ public class Controller extends Button_class {
     private Kuba kuba;
     private Player activeplayer;
     AnchorPane active;
+    String[] activeList;
 
     public void init(){
         player1= new Player();
@@ -77,7 +78,8 @@ public class Controller extends Button_class {
     @FXML
     protected void start_game(){
         close_window(choosed);
-        active=kuba_check;
+        active=choosed;
+        ok2.setOnMouseClicked(mouseEvent -> checked());
         String s=kuba.get_position();
         Circle c= get_circle(all_group.get(s));
         c.setFill(Paint.valueOf("Red"));
@@ -92,6 +94,7 @@ public class Controller extends Button_class {
         close_window(murder1);
         action_text.setText("Graczu "+activeplayer.playerID+"\n jaką akcje chcesz wykonać?");
         open_window(action_panel);
+        activeList = get_groups(activeplayer.rectangle);
     }
 
     protected void changeplayer(){
@@ -123,6 +126,7 @@ public class Controller extends Button_class {
             spy_blue.setLayoutY(r.getLayoutY()-50+28);
             spy_blue.setVisible(true);
         }
+        activeList = get_groups(activeplayer.rectangle);
     }
 
     @FXML
@@ -149,8 +153,7 @@ public class Controller extends Button_class {
     @FXML
     protected void check(){
         go.setDisable(true);
-        String[] arrayList = get_groups(activeplayer.rectangle);
-        for(String s:arrayList){
+        for(String s:activeList){
            set_active_group(all_group.get(s),green);
        }
         close_window(action_panel);
@@ -160,6 +163,10 @@ public class Controller extends Button_class {
         go.setDisable(true);
         kill.setDisable(true);
         check.setDisable(true);
+        for(String s:activeList){
+            set_active_group(all_group.get(s),green);
+        }
+        close_window(action_panel);
     }
     @FXML
     protected void go(){
@@ -187,13 +194,34 @@ public class Controller extends Button_class {
         changeplayer();
         action_text.setText("Graczu "+activeplayer.playerID+"\n jaką akcje chcesz wykonać?");
         open_window(action_panel);
+        activeList = get_groups(activeplayer.rectangle);
     }
     @FXML
     protected void a(Event e){
         Group g= (Group) e.getSource();
+        if(kuba.was_there(g.getId())){
+            set_active_group(g,"Orange");
+            kuba_text.setText("Kuba przechodził przez to pole");
+            g.setDisable(true);
+        }else {
+            set_active_group(g,"White");
+            kuba_text.setText("Kuba nie przechodził tą drogą");
+            g.setDisable(true);
+        }
+        table_delete(g.getId());
         open_window(kuba_check);
-        g.setDisable(true);
-        set_active_group(g,"White");
+
+
+    }
+    protected void table_delete(String s){
+        String[] n= new String[activeList.length];
+        int i=0;
+        for(String a:activeList){
+            if(a.equals(s)) continue;
+            n[i]=a;
+            i++;
+        }
+        activeList=n;
     }
     @FXML
     protected void checked(){
@@ -229,7 +257,32 @@ public class Controller extends Button_class {
         map_rectangle.put("r11",new String[]{"r10","r13"});
         map_group.put("r11", new String[]{"g17","g18"});
         map_rectangle.put("r12",new String[]{"r10","r14","r20"});
-        map_group.put("r12", new String[]{"g29","g30","g28","31"});
+        map_group.put("r12", new String[]{"g29","g30","g28","g31"});
+        map_rectangle.put("r13",new String[]{"r11","r7"});
+        map_group.put("r13", new String[]{"g12","g18","g27","g19"});
+        map_rectangle.put("r14",new String[]{"r13","r12"});
+        map_group.put("r14", new String[]{"g27","g28","g26"});
+        map_rectangle.put("r15",new String[]{"r13","r6","r16","r17"});
+        map_group.put("r15", new String[]{"g11","g19","g20","g22"});
+        map_rectangle.put("r16",new String[]{"r15"});
+        map_group.put("r16", new String[]{"g20","g21"});
+        map_rectangle.put("r17",new String[]{"r15","r18","r22"});
+        map_group.put("r17", new String[]{"g22","g24","g23","g37"});
+        map_rectangle.put("r18",new String[]{"r17","r19","r21"});
+        map_group.put("r18", new String[]{"g24","g35","g25"});
+        map_rectangle.put("r19",new String[]{"r18","r14","r20"});
+        map_group.put("r19", new String[]{"g26","g33","g25"});
+        map_rectangle.put("r20",new String[]{"r19","r12","r21"});
+        map_group.put("r20", new String[]{"g33","g31","g34"});
+        map_rectangle.put("r21",new String[]{"r20","r18","r22"});
+        map_group.put("r21", new String[]{"g34","g35","g36","g41"});
+        map_rectangle.put("r22",new String[]{"r21","r14"});
+        map_group.put("r22", new String[]{"g37","g36","g38"});
+        map_rectangle.put("r23",new String[]{"r22","r24"});
+        map_group.put("r23", new String[]{"g38","g39","g40"});
+        map_rectangle.put("r24",new String[]{"r23","r21"});
+        map_group.put("r24", new String[]{"g40","g41","g42","g43"});
+
     }
 
 
