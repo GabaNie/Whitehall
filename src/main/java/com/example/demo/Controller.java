@@ -52,7 +52,7 @@ public class Controller extends Button_class {
         all_group= get_all_groups(board);
         all_rectangle= get_all_rectangle(board);
         close_window(announcement);
-        open_window(wybierz_pole);
+        open_window(choose_rectangle);
     }
     @FXML
     protected void choose_rectangle(){
@@ -61,7 +61,7 @@ public class Controller extends Button_class {
             r.setStroke(Paint.valueOf(green));
             // funkcja zapisujaca wybrane pole
         }
-        close_window(wybierz_pole);
+        close_window(choose_rectangle);
     }
     @FXML
     protected void open_window(AnchorPane a){

@@ -1,9 +1,7 @@
 package com.example.demo;
 
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -29,7 +27,7 @@ public class Button_class {
     @FXML
     public AnchorPane announcement;
     public AnchorPane action_panel;
-    public AnchorPane wybierz_pole;
+    public AnchorPane choose_rectangle;
     @FXML
     public static Group g1;
     public static Group g2;

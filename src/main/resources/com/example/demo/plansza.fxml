@@ -690,7 +690,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Rectangle>
-            <AnchorPane fx:id="wybierz_pole" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <AnchorPane fx:id="choose_rectangle" layoutX="383.0" layoutY="171.0" prefHeight="200.0" prefWidth="200.0" visible="false">
                <children>
                   <ListView fixedCellSize="0.0" layoutX="7.0" layoutY="6.0" prefHeight="187.0" prefWidth="188.0" />
                   <Text layoutX="42.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz pole startowe" />
