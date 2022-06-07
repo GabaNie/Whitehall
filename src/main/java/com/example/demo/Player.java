@@ -1,14 +1,18 @@
 package com.example.demo;
 
+import javafx.scene.shape.Rectangle;
+
 import java.net.*;
 import java.io.*;
+//import java.awt.event.*;
 
 
 public class Player{
-    public String rectangleID;
+    public Rectangle rectangle;
+    public String image;
     //private int width;
     //private int height;
-    private int playerID;
+    public int playerID;
     private int otherPlayer;
     private int turnsMade;
     private boolean buttonEnable;
@@ -16,13 +20,13 @@ public class Player{
     private ClientSideConnection csc;
 
     public Player(){
-        rectangleID= "";
+        rectangle= null;
         //width=w;
         //height=h;
         turnsMade=0;
     }
-    public void setRectangle(String recID){
-        rectangleID= recID;
+    public void setRectangle(Rectangle r){
+        rectangle= r;
     }
     public void setUpGUI(){
 
@@ -47,8 +51,17 @@ public class Player{
     public void connectToServer(){
         csc= new ClientSideConnection();
     }
-/*
+
     public  void setUpButton(){
+        System.out.println("Turns"+playerID);
+        Thread t= new Thread(new Runnable() {
+            public void run() {
+                updateTurn();
+            }
+        });
+        t.start();
+    }
+        /*
         ActionListener al=new ActionListener() {
             public void actionPerformed(ActionEvent ae){
                 JButton b= (JButton) ae.getSource();
@@ -87,7 +100,7 @@ public class Player{
         b2.setEnabled(buttonEnable);
         b3.setEnabled(buttonEnable);
         b4.setEnabled(buttonEnable);
-    }
+    }*/
 
 
     public void startRecivingButtonNums(){
@@ -100,9 +113,9 @@ public class Player{
         });
         t.start();
     }
- */
+
     public void updateTurn(){
-        //int n= csc.receiveButtonNum();
+        int n= csc.receiveButtonNum();
         //message.setText("Your enemy click b #"+n);
         //enemyPoints+=values[n-1];
         //System.out.println("Your enemy has"+ enemyPoints);
@@ -140,17 +153,6 @@ public class Player{
                 dataOut= new DataOutputStream(socket.getOutputStream());
                 playerID= dataIn.readInt();
                 System.out.println("Connected to server as Player #"+playerID);
-                /*
-                maxTurns= dataIn.readInt()/2;
-                values[0]= dataIn.readInt();
-                values[1]= dataIn.readInt();
-                values[2]= dataIn.readInt();
-                values[3]= dataIn.readInt();
-                System.out.println("maxTurns"+maxTurns);
-                System.out.println("Value #1 is "+values[0]);
-                System.out.println("Value #2 is "+values[1]);
-                System.out.println("Value #3 is "+values[2]);
-                System.out.println("Value #4 is "+values[3]);*/
             }catch (IOException ex){
                 System.out.println("IO Exception from CSC");
             }
@@ -164,7 +166,7 @@ public class Player{
                 System.out.println("IOExcetion from sendButtonNum()");
             }
         }
-
+*/
         public int receiveButtonNum(){
             int n=-1;
             try{
@@ -174,7 +176,7 @@ public class Player{
                 System.out.println("IOException from reciveButtonNum");
             }
             return n;
-        }*/
+        }
         public void closeConnection(){
             try{
                 socket.close();

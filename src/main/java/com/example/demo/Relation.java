@@ -3,6 +3,7 @@ package com.example.demo;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -33,9 +34,26 @@ public class Relation extends Button_class {
         }
         return list;
     }
+    public static HashMap<String,Rectangle> get_all_rectangle2(Pane board){
+        ObservableList<Node> array= board.getChildren();
+        HBox hBox=null;
+        for(Node g: array){
+            if(g.getTypeSelector().equals("HBox")){
+                hBox= (HBox) g;
+            }
+        }
+        array= hBox.getChildren();
+        HashMap<String,Rectangle> list= new HashMap<>();
+        for(Node g: array){
+            if(g.getTypeSelector().equals("Rectangle")){
+                list.put(g.getId(), (Rectangle) g);
+            }
+        }
+        return list;
+    }
 
     public static ArrayList<String> get_groups(Rectangle r){
-        return map.get(r.getId());
+        return map_group.get(r.getId());
     }
 
     static Circle get_circle(Group g){

@@ -11,6 +11,7 @@ public class Server {
     private int numPlayers;
     private ServerSideConnection player1;
     private ServerSideConnection player2;
+    private ServerSideConnection kuba;
 
     public Server(){
         System.out.println("----Game Server-----");
@@ -24,20 +25,22 @@ public class Server {
     public void acceptConnections(){
         try{
             System.out.println("Waiting for connections...");
-            while (numPlayers<2){
+            while (numPlayers<3){
                 Socket s=ss.accept();
                 numPlayers++;
                 System.out.println("Player #"+ numPlayers);
                 ServerSideConnection ssc= new ServerSideConnection(s,numPlayers);
                 if(numPlayers==1){
                     player1=ssc;
-                }else {
+                }else if(numPlayers==2){
                     player2=ssc;
+                }else {
+                    kuba=ssc;
                 }
                 Thread t= new Thread(ssc);
                 t.start();
             }
-            System.out.println("we now have 2 players.");
+            System.out.println("we now have 3 players.");
         }catch (IOException ex){
             System.out.println("IOException");
         }
@@ -63,21 +66,16 @@ public class Server {
         public void run(){
             try{
                 dataOut.writeInt(playerID);
-                /*dataOut.writeInt(maxTurns);
-                dataOut.writeInt(values[0]);
-                dataOut.writeInt(values[1]);
-                dataOut.writeInt(values[2]);
-                dataOut.writeInt(values[3]);*/
                 dataOut.flush();
                 while (true){
                     if(playerID==1){
-                        //player1ButtonNum=dataIn.readInt();
-                        System.out.println("P1 clicked #");
-                        //player2.sendButtonNum(player1ButtonNum);
+                        int player1ButtonNum=dataIn.readInt();
+                        System.out.println("P1 clicked #"+player1ButtonNum);
+                        player2.sendButtonNum(player1ButtonNum);
                     }else {
-                        //player2ButtonNum=dataIn.readInt();
-                        System.out.println("P2 clicked #");
-                        //player1.sendButtonNum(player2ButtonNum);
+                        int player2ButtonNum=dataIn.readInt();
+                        System.out.println("P2 clicked #"+player2ButtonNum);
+                        player1.sendButtonNum(player2ButtonNum);
                     }
                 }
                 //player1.closeConnection();
