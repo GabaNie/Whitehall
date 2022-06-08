@@ -52,9 +52,11 @@ public class Controller extends Button_class {
             r.setStroke(Paint.valueOf(green));
         }
         close_window(choose_rectangle);
+        choosed_text.setText("Gracz "+ activeplayer.playerID+"wybrał pole startowe.");
     }
     @FXML
     protected void choose(Event e){
+        close_window(choosed);
         Rectangle r= (Rectangle) e.getSource();
         move(r);
         for( Rectangle rr: all_rectangle.values()){
@@ -66,11 +68,13 @@ public class Controller extends Button_class {
     @FXML
     protected void choosed1(){
         close_window(choosed);
+
         for( Rectangle r: all_rectangle.values()){
             r.setDisable(false);
             r.setStroke(Paint.valueOf(green));
         }
         changeplayer();
+        choosed_text.setText("Gracz "+ activeplayer.playerID+"wybrał pole startowe.");
         player1.rectangle.setDisable(true);
         player1.rectangle.setStroke(Paint.valueOf("Black"));
         ok2.setOnMouseClicked(mouseEvent -> start_game());
@@ -102,6 +106,10 @@ public class Controller extends Button_class {
         text_turn.setText("Gracz 2");}
         else {
             kuba_move();
+            if(kuba.turn==9) {
+                close_window(action_panel);
+                open_window(end);
+            }
             activeplayer = player1;
             text_turn.setText("Gracz 1");
         }
@@ -170,19 +178,22 @@ public class Controller extends Button_class {
     }
     @FXML
     protected void go(){
+        go.setDisable(true);
+        close_window(action_panel);
         set_active_rectangle(activeplayer.rectangle.getId(),green);
         set_move(activeplayer.rectangle.getId(),1);
     }
 
     protected void set_move(String rect, int n){
-        if (n>3) return;
+        if (n<=3){
         String[] array=map_rectangle.get(rect);
+            System.out.println(array);
         for(String r:array){
             if(all_rectangle.get(r).isDisable()){
                 set_active_rectangle(r,green);
                 set_move(r,n++);
             }
-        }
+        }}
     }
     @FXML
     protected void end_action(){
@@ -226,6 +237,7 @@ public class Controller extends Button_class {
     @FXML
     protected void checked(){
         close_window(kuba_check);
+        close_window(choosed);
         open_window(action_panel);
     }
 
@@ -272,7 +284,7 @@ public class Controller extends Button_class {
         map_group.put("r18", new String[]{"g24","g35","g25"});
         map_rectangle.put("r19",new String[]{"r18","r14","r20"});
         map_group.put("r19", new String[]{"g26","g33","g25"});
-        map_rectangle.put("r20",new String[]{"r19","r12","r21"});
+        map_rectangle.put("r20",new String[]{"r19","r12","r21","r35"});
         map_group.put("r20", new String[]{"g33","g31","g34"});
         map_rectangle.put("r21",new String[]{"r20","r18","r22"});
         map_group.put("r21", new String[]{"g34","g35","g36","g41"});
@@ -280,9 +292,34 @@ public class Controller extends Button_class {
         map_group.put("r22", new String[]{"g37","g36","g38"});
         map_rectangle.put("r23",new String[]{"r22","r24"});
         map_group.put("r23", new String[]{"g38","g39","g40"});
-        map_rectangle.put("r24",new String[]{"r23","r21"});
+        map_rectangle.put("r24",new String[]{"r23","r21","r25","r37"});
         map_group.put("r24", new String[]{"g40","g41","g42","g43"});
-
+        map_rectangle.put("r25",new String[]{"r24","r26"});
+        map_group.put("r25", new String[]{"g43","g44"});
+        map_rectangle.put("r26",new String[]{"r25","r27"});
+        map_group.put("r26", new String[]{"g44","g45"});
+        map_rectangle.put("r27",new String[]{"r26","r28"});
+        map_group.put("r27", new String[]{"g45","g46"});
+        map_rectangle.put("r28",new String[]{"r27","r29"});
+        map_group.put("r28", new String[]{"g46","g47","g49","g48"});
+        map_rectangle.put("r29",new String[]{"r28","r30","r31"});
+        map_group.put("r29", new String[]{"g49","g55","g50"});
+        map_rectangle.put("r30",new String[]{"r29","r32"});
+        map_group.put("r30", new String[]{"g50","g51","g52"});
+        map_rectangle.put("r31",new String[]{"r29","r32","r36"});
+        map_group.put("r31", new String[]{"g56","g55","g54"});
+        map_rectangle.put("r32",new String[]{"r31","r30","r36"});
+        map_group.put("r32", new String[]{"g54","g52","g53","g61"});
+        map_rectangle.put("r33",new String[]{"r32","r34"});
+        map_group.put("r33", new String[]{"g60","g61"});
+        map_rectangle.put("r34",new String[]{"r33","r35"});
+        map_group.put("r34", new String[]{"g60","g61"});
+        map_rectangle.put("r35",new String[]{"r34","r20","r36"});
+        map_group.put("r36", new String[]{"g32","g59","g58"});
+        map_rectangle.put("r36",new String[]{"r35","r31","r37"});
+        map_group.put("r36", new String[]{"g58","g56","g57"});
+        map_rectangle.put("r37",new String[]{"r36","r24"});
+        map_group.put("r37", new String[]{"g42","g57"});
     }
 
 

@@ -13,7 +13,7 @@ public class Kuba {
 
     public Kuba(){
         turn=0;
-        turns= new String[]{"g15", "r2", "g2"};
+        turns= new String[]{"g15", "g16", "g17","g18","g27","g26","g33","g32","g58","g57"};
 
     }
     public String get_position(){

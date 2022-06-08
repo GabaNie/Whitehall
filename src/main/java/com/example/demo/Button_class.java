@@ -35,6 +35,7 @@ public class Button_class {
     public AnchorPane murder1;
     public AnchorPane kuba_check;
     public AnchorPane choosed;
+    public AnchorPane end;
     @FXML
     public static Group g1;
     public static Group g2;
@@ -52,5 +53,6 @@ public class Button_class {
     public Text action_text;
     public Text text_turn;
     public Text kuba_text;
+    public Text choosed_text;
 
 }
