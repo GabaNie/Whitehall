@@ -7,9 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import static com.example.demo.Relation.*;
@@ -18,18 +16,18 @@ import static com.example.demo.Relation.*;
 public class Controller extends Button_class {
     String green="#3ffc32";
     Rectangle current;
-    private Player player1;
-    private Player player2;
+    private Player1 player1;
+    private Player1 player2;
     private Kuba kuba;
-    private Player activeplayer;
+    private Player1 activeplayer;
     AnchorPane active;
     String[] activeList;
 
     public void init(){
-        player1= new Player();
+        player1= new Player1();
         player1.connectToServer();
         player1.setUpGUI();
-        player2= new Player();
+        player2= new Player1();
         player2.connectToServer();
         player2.setUpGUI();
         kuba= new Kuba();

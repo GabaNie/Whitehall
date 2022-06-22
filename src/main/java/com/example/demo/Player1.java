@@ -7,7 +7,7 @@ import java.io.*;
 //import java.awt.event.*;
 
 
-public class Player{
+public class Player1 {
     public Rectangle rectangle;
     public String image;
     //private int width;
@@ -19,7 +19,7 @@ public class Player{
 
     private ClientSideConnection csc;
 
-    public Player(){
+    public Player1(){
         rectangle= null;
         //width=w;
         //height=h;
